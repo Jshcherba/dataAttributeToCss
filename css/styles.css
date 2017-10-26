@@ -1,0 +1,17 @@
+#wrapper {
+    width: 1000px;
+    padding: 10px;
+    background: grey;
+    margin: auto;
+}
+
+.row {
+    margin: 10px 0 0;
+    height: 25px;
+    line-height: 25px;
+    background: white;
+}
+
+.row:first-child {
+    margin: 0;
+}
