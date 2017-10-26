@@ -12,6 +12,7 @@
 <p>This pseudo app is basically an investigation of how to use data attributes in css <br> basically we are testing <a
         href="https://developer.mozilla.org/en-US/docs/Web/CSS/attr">This article</a></p>
 <div id="wrapper">
+    <div data-width="0" id="idNumber0" class="row">idNumber 0 has hardcoded data-width=0</div>
     <div data-width="10" id="idNumber1" class="row">idNumber 1 has hardcoded data-width=10</div>
     <div data-width="20" id="idNumber2" class="row">idNumber 2 has hardcoded data-width=20</div>
     <div data-width="30" id="idNumber3" class="row">idNumber 3 has hardcoded data-width=30</div>
@@ -24,5 +25,32 @@
     <div data-width="100" id="idNumber10" class="row">idNumber 10 has hardcoded data-width=100</div>
 </div>
 
+<p>Summary: currently code like<br>
+<code>width: attr(data-width %);</code>
+    <br>
+    does not work <br>
+    what works well - setting that value as a content to content of pseudo elements <br>
+    <code>
+        p::before { <br>
+        content: attr(data-foo) " ";<br>
+        }<br>
+    </code><br>
+    but we still can relate on values in data attributes if we know their possible variants like on section above it is
+    enough to change value of data-width attribute (on rendering or with ajax call) and still everything will work
+    correctly<br>
+    <code>
+        .row[data-width="0"] {width: 0;}<br>
+        .row[data-width="10"] {width: 10%;}<br>
+        .row[data-width="20"] {width: 20%;}<br>
+        .row[data-width="30"] {width: 30%;}<br>
+        .row[data-width="40"] {width: 40%;}<br>
+        .row[data-width="50"] {width: 50%;}<br>
+        .row[data-width="60"] {width: 60%;}<br>
+        .row[data-width="70"] {width: 70%;}<br>
+        .row[data-width="80"] {width: 80%;}<br>
+        .row[data-width="90"] {width: 90%;}<br>
+        .row[data-width="100"] {width:100%;}<br>
+    </code>
+</p>
 </body>
 </html>
