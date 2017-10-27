@@ -25,19 +25,20 @@
     <div data-width="100" id="idNumber10" class="row">idNumber 10 has hardcoded data-width=100</div>
 </div>
 
-<p>Summary: currently code like<br>
+<p>Summary: currently code like
 <code>width: attr(data-width %);</code>
-    <br>
-    does not work <br>
-    what works well - setting that value as a content to content of pseudo elements <br>
+    does not work <br><br>
+    what works well - setting that value as a content to content of pseudo elements
     <code>
         p::before { <br>
         content: attr(data-foo) " ";<br>
         }<br>
-    </code><br>
+    </code>
+
     but we still can relate on values in data attributes if we know their possible variants like on section above it is
     enough to change value of data-width attribute (on rendering or with ajax call) and still everything will work
-    correctly<br>
+    correctly
+
     <code>
         .row[data-width="0"] {width: 0;}<br>
         .row[data-width="10"] {width: 10%;}<br>
@@ -52,5 +53,52 @@
         .row[data-width="100"] {width:100%;}<br>
     </code>
 </p>
+<p>Lets try to create a reviews using only data attributes and css</p>
+<ul class="aka-tiles">
+    <li>
+        <div data-review="10" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="90" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="20" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="100" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="30" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="0" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="60" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="70" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="40" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="80" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+    <li>
+        <div data-review="50" class="reviews">&nbsp;</div><div></div>
+        <a href="javascript:void(0)" class="plus">+</a><a href="javascript:void(0)" class="minus">-</a>
+    </li>
+</ul>
 </body>
 </html>

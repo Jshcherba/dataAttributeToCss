@@ -1,3 +1,18 @@
+body {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+code {
+    margin: 20px 0;
+    display: block;
+}
+
 #wrapper {
     width: 1000px;
     padding: 10px;
@@ -30,3 +45,65 @@
 .row[data-width="80"] {width: 80%;}
 .row[data-width="90"] {width: 90%;}
 .row[data-width="100"] {width:100%;}
+
+.aka-tiles {
+    list-style: none;
+    max-width: 1000px;
+    padding: 0 20px 20px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.aka-tiles li {
+    display: inline-block;
+    text-align: center;
+    width: calc(25% - 23px);
+    min-width: 92px;
+    margin: 10px 10px 20px;
+}
+
+.aka-tiles li .reviews {
+    margin: 0 auto 5px;
+    width: 92px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    background: url("../images/stars-empty.png") no-repeat left top;
+}
+
+.aka-tiles li .reviews::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    transition: all ease 0.25s;
+    height: 16px;
+    background: url("../images/stars-full.png") no-repeat left top;
+}
+
+.aka-tiles li .reviews[data-review="10"]::after {width: 10%;}
+.aka-tiles li .reviews[data-review="20"]::after {width: 20%;}
+.aka-tiles li .reviews[data-review="30"]::after {width: 30%;}
+.aka-tiles li .reviews[data-review="40"]::after {width: 40%;}
+.aka-tiles li .reviews[data-review="50"]::after {width: 50%;}
+.aka-tiles li .reviews[data-review="60"]::after {width: 60%;}
+.aka-tiles li .reviews[data-review="70"]::after {width: 70%;}
+.aka-tiles li .reviews[data-review="80"]::after {width: 80%;}
+.aka-tiles li .reviews[data-review="90"]::after {width: 90%;}
+.aka-tiles li .reviews[data-review="100"]::after {width: 100%;}
+
+a.plus,
+a.minus {
+    border: 1px darkslategray solid;
+    border-radius: 10px;
+    background: cyan;
+    color: darkslategray;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 20px;
+    width: 20px;
+    margin: 0 10px;
+}
